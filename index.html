@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Je'Cole's Bakery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="IMAGES/logoWhite.png">
+</head>
+<body>
+    <section id="header">
+        <a href="index.html"><img src="IMAGES/logoWhite.png" id="logo"></a>
+        <nav>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Log in</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Cart</a></li>
+            </ul>
+        </nav>
+    </section>
+    <section>
+        <div class="container">
+            <h1>Log in</h1>
+            <p>New user? <a href = "signup.html">Sign up</a> instead</p>
+
+            <form id ="login">
+                <label for="email"><h4>Email:</h4></label>
+                <input type = "email" id = "email" required>
+                <br><br><br>
+               <label for="Password"><h4>Password:</h4></label>
+                <input type = "password" id = "password" required>
+            <button type="submit" id="submit"><h3>Log in</h3></button>
+            </form>
+
+        </div>
+    </section>
+
+    <script src="login.js"></script>
+</body>
+</html>
