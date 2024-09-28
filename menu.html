@@ -15,7 +15,7 @@
                 <li><a href="index.html">Log in</a></li>
                 <li><a class="active" href="#">Menu</a></li>
                 <li><a href="#">About Us</a></li>
-                <li><a href="#">Cart</a></li>
+                <li><a href="#" id="openCart">Cart</a></li>
             </ul>
         </nav>
     </section>
@@ -27,15 +27,15 @@
     <a> <img src="images/Pan au Chocolat.png" id="PanauChocolat"></a>
     <a> <p class="text1"> Classic Croissant </p></a>
     <a> <h4 class="text1_price"> PHP 40 </h4></a>
-    <a><button type="submit" id="text1_button"> ADD TO CART</button></a>
+    <a><button id="text1_button" onclick="addToCart('Classic Croissant', 40.00)"> ADD TO CART</button></a>
 
     <a> <p class="text2"> Medium Baguette </p></a>
     <a> <h4 class="text2_price"> PHP 89 </h4></a>
-    <a><button type="submit" id="text2_button"> ADD TO CART</button></a>
+    <a><button id="text2_button" onclick="addToCart('Medium Baguette', 89.00)"> ADD TO CART</button></a>
 
     <a> <p class="text3"> Pan au Chocolat </p></a>
     <a> <h4 class="text3_price"> PHP 45 </h4></a>
-    <a><button type="submit" id="text3_button"> ADD TO CART</button></a>
+    <a><button id="text3_button" onclick="addToCart('Pan au Chocolat', 45.00)"> ADD TO CART</button></a>
 
     <a> <img src="images/Strawberry Macaroons.png" id="Macaroons"></a>
     <a> <img src="images/Eclair.png" id="Eclair"></a>
@@ -43,18 +43,39 @@
 
     <a> <p class="text4"> Strawberry Macaroons </p></a>
     <a> <h4 class="text4_price"> PHP 30 </h4></a>
-    <a><button type="submit" id="text4_button"> ADD TO CART</button></a>
+    <a><button id="text4_button" onclick="addToCart('Strawberry Macaroons', 30.00)"> ADD TO CART</button></a>
 
     <a> <p class="text5"> Eclair </p></a>
     <a> <h4 class="text5_price"> PHP 25 </h4></a>
-    <a><button type="submit" id="text5_button"> ADD TO CART</button></a>
+    <a><button id="text5_button" onclick="addToCart('Eclair', 25.00)"> ADD TO CART</button></a>
 
     <a> <p class="text6"> Paris-Brest </p></a>
     <a> <h4 class="text6_price"> PHP 129 </h4></a>
-    <a><button type="submit" id="text6_button"> ADD TO CART</button></a>
-
+    <a><button id="text6_button" onclick="addToCart('Paris-Brest', 129.00)"> ADD TO CART</button></a>
 
     <br><br><br><br><br><br>
-    <script src="#"></script>
+
+    <section class="cart">
+        <table class="cartList">
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td><ul id="cartItem"></ul></td>
+                <td><ul id="cartPrice"></ul></td>
+            </tr>
+            <tr class="lastRow">
+                <td>Total:</td>
+                <td><p id="cartTotal">₱ 0.00</p></td>
+            </tr>
+        </table>
+        <div class="checkOutTab">
+            <div class="checkOut">Checkout</div>
+            <div id="closeCart">Close</div>
+        </div>
+    </section>
+
+    <script src="menu.js"></script>
 </body>
 </html>
