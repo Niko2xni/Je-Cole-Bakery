@@ -329,26 +329,22 @@ body{
 .cart {
     position: fixed;
     top: 0;
-    /* left: 100%; */
+    left: 100%;
     width: 500px; 
     height: 100vh;
     transition: 0.5s;
+    overflow: auto;
     background-color: #ac4417;
 }
 
 .cartList {
     width: 100%;
     font-size: 25px;
-    border: 1px solid;
 }
 
-td {
-    border: 1px solid;
-}
-
-.lastRow {
-    position: relative;
-    bottom: 0;
+#cartItem,
+#cartPrice{
+    list-style: none;
 }
 
 .checkOutTab {

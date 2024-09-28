@@ -18,6 +18,7 @@ function validate() {
 
     if (isPhoneValid && arePasswordsMatching) {
         alert("You have successfully registered an account");
+        window.location.href = "index.html";
     } else {
         if (!isPhoneValid) {
             alert("Phone number must be exactly 11 digits");
@@ -26,4 +27,4 @@ function validate() {
             alert("Passwords do not match");
         }
     }
-}
+};
