@@ -15,7 +15,7 @@
                 <li><a href="index.html">Log in</a></li>
                 <li><a class="active" href="#">Menu</a></li>
                 <li><a href="#">About Us</a></li>
-                <li><a href="#">Cart</a></li>
+                <li><a href="#" id="openCart">Cart</a></li>
             </ul>
         </nav>
     </section>
@@ -53,8 +53,29 @@
     <a> <h4 class="text6_price"> PHP 129 </h4></a>
     <a><button type="submit" id="text6_button"> ADD TO CART</button></a>
 
-
     <br><br><br><br><br><br>
-    <script src="#"></script>
+
+    <section class="cart">
+        <table class="cartList">
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td><ul class="cartItem"></ul></td>
+                <td><ul class="cartPrice"></ul></td>
+            </tr>
+            <tr class="lastRow">
+                <td>Total:</td>
+                <td>₱ 0.00</td>
+            </tr>
+        </table>
+        <div class="checkOutTab">
+            <div class="checkOut">Checkout</div>
+            <div id="closeCart">Close</div>
+        </div>
+    </section>
+
+    <script src="menu.js"></script>
 </body>
 </html>

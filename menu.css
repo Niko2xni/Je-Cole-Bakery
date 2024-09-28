@@ -320,3 +320,63 @@ body{
     color: black;
     box-shadow: 0 0 10px black;
 }
+
+/* Shopping Cart CSS */
+.active .cart{
+    left: calc(100% - 500px);
+}
+
+.cart {
+    position: fixed;
+    top: 0;
+    /* left: 100%; */
+    width: 500px; 
+    height: 100vh;
+    transition: 0.5s;
+    background-color: #ac4417;
+}
+
+.cartList {
+    width: 100%;
+    font-size: 25px;
+    border: 1px solid;
+}
+
+td {
+    border: 1px solid;
+}
+
+.lastRow {
+    position: relative;
+    bottom: 0;
+}
+
+.checkOutTab {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    font-size: 25px;
+    /* border: 1px solid; */
+}
+
+.checkOut {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background-color: #E8BC0E;
+    /* border: 1px solid; */
+}
+
+#closeCart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background-color: #1C1F25;
+    /* border: 1px solid; */
+}
