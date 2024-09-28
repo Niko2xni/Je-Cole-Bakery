@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Je'Cole's Bakery - Delivery Information</title>
+    <link rel="stylesheet" href="delivery.css">
+    <link rel="icon" href="logoWhite.png">
+</head>
+<body>
+    <section id="header">
+        <a href="index.html"><img src="IMAGES/logoWhite.png" id="logo"></a>
+        <nav>
+            <ul id="navbar">
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a class="active" href="#">Cart</a></li>
+                <li><a href="index.html">Log in</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section id="delivery-info">
+        <div class="delivery-container">
+            <h2>Delivery Information</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="house">House/Unit No.:</label>
+                <input type="text" id="house" name="house" required>
+
+                <label for="street">Street:</label>
+                <input type="text" id="street" name="street" required>
+
+                <label for="barangay">Barangay:</label>
+                <input type="text" id="barangay" name="barangay" required>
+
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+
+                <label for="postalCode">Postal Code:</label>
+                <input type="text" id="postalCode" name="postalCode" required>
+
+                <label for="paymentMethod">Payment Method:</label>
+                <select id="paymentMethod" name="paymentMethod" required>
+                    <option value="" disabled selected>Select a payment method</option>
+
+                    <option value="Gcash">Gcash</option>
+                    <option value="PayMaya">PayMaya</option>
+                    <option value="BDO">BDO</option>
+                    <option value="Cash on delivery">Cash on delivery</option>
+                </select>
+
+                <div class="total-container">
+                    <span>TOTAL: PHP 40.00</span>
+                </div>
+
+                <button type="button"  class="pay-btn">PAY NOW</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="delivery.js"></script>
+</body>
+</html>
