@@ -1,13 +1,18 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Get the Pay Now button
-    const payButton = document.querySelector(".pay-btn");
+    var totalPrice = parseFloat(localStorage.getItem("totalPrice"));
+    var cartTotal = document.getElementById('cartTotal');
 
-    // Add a click event listener to the button
-    payButton.addEventListener("click", function() {
-        // Display the alert message
+    cartTotal.textContent = "Total: ₱" + totalPrice.toFixed(2);
+
+    const payButton = document.getElementById('delivery');
+
+    document.getElementById("postalCode").addEventListener("input", function() {
+        this.value = this.value.replace(/[^0-9]/g, '');
+    });
+
+    payButton.addEventListener('submit', (event) => {
+        event.preventDefault();
         alert("Thank you for ordering! Your order is now being processed");
-
-        // Redirect to the menu page
         window.location.href = "menu.html";
     });
 });
