@@ -372,22 +372,7 @@ body{
     color: rgb(50, 50, 50);
     background-color: white;
     height: 100%;
-}
-
-td {
-    flex: 1;
-}
-
-.upperRow {
-    background-color: white;
-}
-
-.middleRow {
-    flex: 1;
-}
-
-.lastRow {
-    margin-top: auto;
+    border-collapse: collapse;
 }
 
 #cartItem,
