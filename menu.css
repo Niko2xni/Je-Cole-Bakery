@@ -323,23 +323,71 @@ body{
 
 /* Shopping Cart CSS */
 .active .cart{
-    left: calc(100% - 500px);
+    left: calc(100% - 520px);
 }
 
 .cart {
     position: fixed;
+    display: flex;
+    flex-direction: column;
     top: 0;
     left: 100%;
     width: 500px; 
-    height: 100vh;
+    height: 600px;
     transition: 0.5s;
     overflow: auto;
-    background-color: #ac4417;
+    border-radius: 25px;
+    background-color: rgb(255, 185, 106);
+}
+
+.cartTab {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 25px;
+    overflow-x: auto;
+}
+
+.cartLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartTab hr {
+    border: 2.5px solid white;
+    margin-bottom: 25px;
+}
+
+#cartLogo {
+    height: 80px;
 }
 
 .cartList {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
     width: 100%;
     font-size: 25px;
+    color: rgb(50, 50, 50);
+    background-color: white;
+    height: 100%;
+}
+
+td {
+    flex: 1;
+}
+
+.upperRow {
+    background-color: white;
+}
+
+.middleRow {
+    flex: 1;
+}
+
+.lastRow {
+    margin-top: auto;
 }
 
 #cartItem,
@@ -348,12 +396,11 @@ body{
 }
 
 .checkOutTab {
-    position: absolute;
     display: flex;
-    bottom: 0;
     width: 100%;
     height: 60px;
     font-size: 25px;
+    cursor: pointer;
     /* border: 1px solid; */
 }
 
@@ -363,6 +410,7 @@ body{
     align-items: center;
     width: 50%;
     height: 100%;
+    color: #1C1F25;
     background-color: #E8BC0E;
     /* border: 1px solid; */
 }
@@ -373,6 +421,7 @@ body{
     align-items: center;
     width: 50%;
     height: 100%;
+    color: #FFD700 ;
     background-color: #1C1F25;
     /* border: 1px solid; */
 }

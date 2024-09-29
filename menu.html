@@ -56,20 +56,26 @@
     <br><br><br><br><br><br>
 
     <section class="cart">
-        <table class="cartList">
-            <tr>
-                <th>Item</th>
-                <th>Price</th>
-            </tr>
-            <tr>
-                <td><ul id="cartItem"></ul></td>
-                <td><ul id="cartPrice"></ul></td>
-            </tr>
-            <tr class="lastRow">
-                <td>Total:</td>
-                <td><p id="cartTotal">₱ 0.00</p></td>
-            </tr>
-        </table>
+        <div class="cartTab">
+            <div class="cartLogo">
+                <img src="images/logoWhite.png" id="cartLogo">
+            </div>
+            <hr>
+            <table class="cartList">
+                <tr class="upperRow">
+                    <th>Item</th>
+                    <th>Price</th>
+                </tr>
+                <tr class="middleRow">
+                    <td><ul id="cartItem"></ul></td>
+                    <td><ul id="cartPrice"></ul></td>
+                </tr>
+                <tr class="lastRow">
+                    <td>Total:</td>
+                    <td><p id="cartTotal">₱ 0.00</p></td>
+                </tr>
+            </table>
+        </div>
         <div class="checkOutTab">
             <div class="checkOut">Checkout</div>
             <div id="closeCart">Close</div>

@@ -1,6 +1,7 @@
 let openCart = document.querySelector('#openCart');
 let closeCart = document.querySelector('#closeCart');
 let body = document.querySelector('body');
+let checkOut = document.querySelector('.checkOut');
 var cart = [];
 var totalPrice = 0.00;
 
@@ -41,4 +42,9 @@ openCart.addEventListener('click', ()=>{
 
 closeCart.addEventListener('click', ()=>{
     body.classList.remove('active');
+});
+
+checkOut.addEventListener('click', ()=>{
+    localStorage.setItem("totalPrice", totalPrice);
+    window.location.href = "delivery.html";
 });
