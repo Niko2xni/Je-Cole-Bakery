@@ -12,6 +12,13 @@ function addToCart(name, price) {
     display();
 };
 
+function removeFromCart(index) {
+    totalPrice -= cart[index].rate;
+    cart.splice(index, 1);
+
+    display();
+}
+
 function display() {
     var cartItem = document.getElementById('cartItem');
     var cartPrice = document.getElementById('cartPrice');
@@ -20,7 +27,7 @@ function display() {
     cartItem.innerHTML = '';
     cartPrice.innerHTML = '';
 
-    cart.forEach(function (pizza) {
+    cart.forEach(function (pizza, index) {
         var addedItems = document.createElement('li');
         var bills = document.createElement('li');
 
@@ -28,11 +35,18 @@ function display() {
 
         bills.textContent = '₱' + pizza.rate.toFixed(2);
 
+        var removeButton = document.createElement('button');
+        removeButton.textContent = 'Remove';
+        removeButton.onclick = function() {
+            removeFromCart(index);
+        };
+
+        addedItems.appendChild(removeButton);
+
         cartItem.appendChild(addedItems);
         cartPrice.appendChild(bills);
     });
     
-    //format for total amount
     cartTotal.textContent = '₱' + totalPrice.toFixed(2);
 };
 
