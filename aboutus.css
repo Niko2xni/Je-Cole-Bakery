@@ -55,6 +55,16 @@ transition: 0.4s;
 letter-spacing: 2px;
 }
 
+/* Hide all items by default */
+.slider .list .item {
+    display: none;
+}
+
+/* Show only the first item */
+.slider .list .item:first-child {
+    display: block;
+}
+
 .slider .list .item button:nth-child(2){
 background-color: transparent;
 border: 1px solid #fff;
@@ -117,6 +127,7 @@ z-index: 1;
 .slider .list .item:nth-child(1) .content .description,
 .slider .list .item:nth-child(1) .content .buttons
 {
+
 transform: translateY(50px);
 filter: blur(20px);
 opacity: 0;
