@@ -9,6 +9,7 @@ body {
     font-size: 12px;
 }
 
+
 a {
     text-decoration: none;
 }
@@ -40,6 +41,50 @@ header a:hover{
     background: #14ff72cb;
     border-radius: 2px;
 }
+
+
+/*
+
+#logo {
+    height: 70px ;
+    margin-left: 30px;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px, 80px;
+    background-color: rgb(46, 33, 2);
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li{
+    list-style: none;
+    padding: 0 30px;
+    font-size: 20px;
+}
+
+#navbar a{
+    text-decoration: none;
+    color: white;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: rgb(46, 33, 2);
+    background-color: rgb(231, 223, 213);
+    padding: 8px;
+    border-radius: 8px;
+    font-weight:bold;
+}
+
+*/
 
 .slider{
     height: 100vh;
