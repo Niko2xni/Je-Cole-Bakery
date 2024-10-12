@@ -1,328 +1,94 @@
-* {
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
-}
-
-body{
-    background-image: url("images/LightBg.jpg");
-    height: 92vh;
-    background-size: cover;
-}
-
-#logo {
-    height: 70px ;
-    margin-left: 30px;
-}
-
-#header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 30px, 80px;
-    background-color: rgb(46, 33, 2);
-}
-
-#navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#navbar li{
-    list-style: none;
-    padding: 0 30px;
-    font-size: 20px;
-}
-
-#navbar a{
-    text-decoration: none;
-    color: white;
-}
-
-#navbar li a:hover,
-#navbar li a.active {
-    color: rgb(46, 33, 2);
-    background-color: rgb(231, 223, 213);
-    padding: 8px;
-    border-radius: 8px;
-    font-weight:bold;
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 #logo1
 {
-    width: 15%;
-    margin-left: 45%;
-    margin-top: 1%;
+    width: 20%;
+    margin-left:40%;
+    padding-top: 5%;
 }
+#subtext
+{
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+#pageName{
+    font-size: 100px;
+    margin-top: 10%;
+    color: white;
+    text-align: center;
+
+}
+
+#menuItems {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff9f;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pic
+{
+    margin-top: 5px;
+    width: 80%;
+    border-radius: 10%;
+    box-shadow: 0 0 10px black;
+}
+
 .text
 {
-    font-size: 95%;
-    font-family: Arial;
-    margin-left: 38%;
-}
-#croissant 
-{
-    width: 14%;
-    height: 30%;
-    border-radius: 10%;
-    margin-left: 20%;
-    margin-top: 2%;
-    box-shadow: 0 0 10px black;
-}
-#baguette 
-{
-    width: 14%;
-    height: 30%;
-    border-radius: 10%;
-    margin-left: 10%;
-    margin-top: 2%;
-    box-shadow: 0 0 10px black;
-}
-#PanauChocolat
-{
-    width: 14%;
-    height: 30%;
-    border-radius: 10%;
-    margin-left: 10%;
-    margin-top: 2%;
-    box-shadow: 0 0 10px black;
-}
-.text1
-{
     font-size: 105%;
     font-family: Arial;
     color: rgb(94, 94, 95);
-    margin-left: 20%;
-    margin-top: 1%;
+    text-align: center;
+    padding: 10px;
 }
-.text1_price
+.text_price
 {
     font-size: 130%;
     font-family: Arial;
     color: rgb(88, 66, 39);
-    margin-left: 20%;
+    text-align: center;
+    padding: 10px;
 }
-#text1_button
+.text_button
 {
-    position: absolute;
     background-color: rgb(139, 85, 35);
     color: white;
-    height: 3%;
-    width: 7%;
+    height: 50px;
+    width: 100%;
     border-radius: 20px;
-    font-size: 60%;
-    margin-left: 27%;
-    margin-top: -1.5%;
+    font-size: 15px;
 }
-#text1_button:hover
+.text_button:hover
 {
     background-color: rgb(247, 206, 168);
     color: black;
     box-shadow: 0 0 10px black;
 }
 
-.text2
-{
-    font-size: 105%;
-    font-family: Arial;
-    color: rgb(94, 94, 95);
-    margin-left: 45%;
-    margin-top: -3%;
-}
-.text2_price
-{
-    font-size: 130%;
-    font-family: Arial;
-    color: rgb(88, 66, 39);
-    margin-left: 45%;
-}
-#text2_button
-{
-    position: absolute;
-    background-color: rgb(139, 85, 35);
-    color: white;
-    height: 3%;
-    width: 7%;
-    border-radius: 20px;
-    font-size: 60%;
-    margin-left: 52%;
-    margin-top: -1.5%;
-}
-#text2_button:hover
-{
-    background-color: rgb(247, 206, 168);
-    color: black;
-    box-shadow: 0 0 10px black;
-}
-
-
-.text3
-{
-    font-size: 105%;
-    font-family: Arial;
-    color: rgb(94, 94, 95);
-    margin-left: 69%;
-    margin-top: -3%;
-}
-.text3_price
-{
-    font-size: 130%;
-    font-family: Arial;
-    color: rgb(88, 66, 39);
-    margin-left: 69%;
-}
-#text3_button
-{
-    position: absolute;
-    background-color: rgb(139, 85, 35);
-    color: white;
-    height: 3%;
-    width: 7%;
-    border-radius: 20px;
-    font-size: 60%;
-    margin-left: 76%;
-    margin-top: -1.5%;
-}
-#text3_button:hover
-{
-    background-color: rgb(247, 206, 168);
-    color: black;
-    box-shadow: 0 0 10px black;
-}
-#Macaroons
-{
-    width: 14%;
-    height: 30%;
-    border-radius: 10%;
-    margin-left: 20%;
-    margin-top: 5%;
-    box-shadow: 0 0 10px black;
-}
-#Eclair
-{
-    width: 14%;
-    height: 30%;
-    border-radius: 10%;
-    margin-left: 10%;
-    margin-top: 5%;
-    box-shadow: 0 0 10px black;
-}
-#Paris
-{
-    width: 14%;
-    height: 30%;
-    border-radius: 10%;
-    margin-left: 10%;
-    margin-top: 5%;
-    box-shadow: 0 0 10px black;
-}
-
-.text4
-{
-    font-size: 105%;
-    font-family: Arial;
-    color: rgb(94, 94, 95);
-    margin-left: 20%;
-    margin-top: 1%;
-}
-.text4_price
-{
-    font-size: 130%;
-    font-family: Arial;
-    color: rgb(88, 66, 39);
-    margin-left: 20%;
-}
-#text4_button
-{
-    position: absolute;
-    background-color: rgb(139, 85, 35);
-    color: white;
-    height: 3%;
-    width: 7%;
-    border-radius: 20px;
-    font-size: 60%;
-    margin-left: 27%;
-    margin-top: -1.5%;
-}
-#text4_button:hover
-{
-    background-color: rgb(247, 206, 168);
-    color: black;
-    box-shadow: 0 0 10px black;
-}
-
-.text5
-{
-    font-size: 105%;
-    font-family: Arial;
-    color: rgb(94, 94, 95);
-    margin-left: 45%;
-    margin-top: -3%;
-}
-.text5_price
-{
-    font-size: 130%;
-    font-family: Arial;
-    color: rgb(88, 66, 39);
-    margin-left: 45%;
-}
-#text5_button
-{
-    position: absolute;
-    background-color: rgb(139, 85, 35);
-    color: white;
-    height: 3%;
-    width: 7%;
-    border-radius: 20px;
-    font-size: 60%;
-    margin-left: 52%;
-    margin-top: -1.5%;
-}
-#text5_button:hover
-{
-    background-color: rgb(247, 206, 168);
-    color: black;
-    box-shadow: 0 0 10px black;
-}
-.text6
-{
-    font-size: 105%;
-    font-family: Arial;
-    color: rgb(94, 94, 95);
-    margin-left: 69%;
-    margin-top: -3%;
-}
-.text6_price
-{
-    font-size: 130%;
-    font-family: Arial;
-    color: rgb(88, 66, 39);
-    margin-left: 69%;
-}
-#text6_button
-{
-    position: absolute;
-    background-color: rgb(139, 85, 35);
-    color: white;
-    height: 3%;
-    width: 7%;
-    border-radius: 20px;
-    font-size: 60%;
-    margin-left: 76%;
-    margin-top: -1.5%;
-}
-#text6_button:hover
-{
-    background-color: rgb(247, 206, 168);
-    color: black;
-    box-shadow: 0 0 10px black;
-}
-
-/* Shopping Cart CSS */
-.active .cart{
+.active .cart {
     left: calc(100% - 520px);
 }
 
@@ -333,7 +99,7 @@ body{
     top: 0;
     left: 100%;
     width: 500px; 
-    height: 600px;
+    height: 100%;
     transition: 0.5s;
     overflow: auto;
     border-radius: 25px;
@@ -359,25 +125,56 @@ body{
     margin-bottom: 25px;
 }
 
+th{
+    margin-left: 55px;
+}
+
 #cartLogo {
     height: 80px;
 }
 
 .cartList {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
     width: 100%;
-    font-size: 25px;
+    font-size: 18px;
     color: rgb(50, 50, 50);
     background-color: white;
-    height: 100%;
     border-collapse: collapse;
 }
 
 #cartItem,
-#cartPrice{
+#cartPrice {
     list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#cartItem li, 
+#cartPrice li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#cartPrice {
+    text-align: right;
+}
+
+.cartTotalRow {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding-right: 15px;
+    border-top: 2px solid #ddd;
+    padding-top: 10px;
+    color: rgb(50, 50, 50);
+}
+
+#cartTotal {
+    text-align: right;
+    color: #000;
+    font-size: 22px;
 }
 
 .checkOutTab {
@@ -386,7 +183,6 @@ body{
     height: 60px;
     font-size: 25px;
     cursor: pointer;
-    /* border: 1px solid; */
 }
 
 .checkOut {
@@ -397,7 +193,6 @@ body{
     height: 100%;
     color: #1C1F25;
     background-color: #E8BC0E;
-    /* border: 1px solid; */
 }
 
 #closeCart {
@@ -406,7 +201,9 @@ body{
     align-items: center;
     width: 50%;
     height: 100%;
-    color: #FFD700 ;
+    color: #FFD700;
     background-color: #1C1F25;
-    /* border: 1px solid; */
+}
+.active .cart {
+    left: calc(100% - 520px); 
 }

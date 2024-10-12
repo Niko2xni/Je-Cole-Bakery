@@ -42,7 +42,7 @@ video {
 color: rgb(238, 184, 69);
 }
 .slider .list .item {
-margin-top: 20px;
+margin-top: 8%;
 margin-left: 10%;
 }
 .slider .list .item button{
@@ -55,12 +55,10 @@ transition: 0.4s;
 letter-spacing: 2px;
 }
 
-/* Hide all items by default */
 .slider .list .item {
     display: none;
 }
 
-/* Show only the first item */
 .slider .list .item:first-child {
     display: block;
 }
@@ -104,8 +102,8 @@ gap: 10px;
 align-items: center;
 }
 .nextPrevArrows button{
-width: 40px;
-height: 40px;
+width: 60px;
+height: 60px;
 border-radius: 50%;
 background-color:rgb(238, 184, 69);
 border: none;
@@ -141,6 +139,7 @@ opacity: 1;
 }
 }
 .description {
+font-size: 20px;
 background-color: rgba(0, 0, 0, 0.5);
 text-align: left;
 color: white;

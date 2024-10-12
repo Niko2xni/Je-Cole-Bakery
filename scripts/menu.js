@@ -10,6 +10,8 @@ function addToCart(name, price) {
     totalPrice += price;
 
     display();
+
+    body.classList.add('active');
 };
 
 function removeFromCart(index) {
@@ -59,6 +61,10 @@ closeCart.addEventListener('click', ()=>{
 });
 
 checkOut.addEventListener('click', ()=>{
-    localStorage.setItem("totalPrice", totalPrice);
-    window.location.href = "delivery.html";
+    if (cart.length === 0) {
+        alert('You need to add an item first!');
+    } else {
+        localStorage.setItem("totalPrice", totalPrice);
+        window.location.href = "delivery.html";
+    }
 });
