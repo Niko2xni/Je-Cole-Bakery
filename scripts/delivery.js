@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
     payButton.addEventListener('submit', (event) => {
         event.preventDefault();
         alert("Thank you for ordering! Your order is now being processed");
-        window.location.href = "menu.html";
+        window.location.href = "receipt.html";
     });
 });
 
