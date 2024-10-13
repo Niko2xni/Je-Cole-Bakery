@@ -207,3 +207,42 @@ th{
 .active .cart {
     left: calc(100% - 520px); 
 }
+
+/* Mobile styles */
+@media screen and (max-width: 600px) {
+    #pageName {
+      font-size: 60px;
+    }
+    .text_button {
+      font-size: 12px;
+    }
+    .product-item {
+      padding: 5px;
+    }
+  }
+  
+  /* Tablet styles */
+  @media screen and (min-width: 600px) and (max-width: 992px) {
+    #pageName {
+      font-size: 80px;
+    }
+    .text_button {
+      font-size: 14px;
+    }
+    .product-item {
+      padding: 15px;
+    }
+  }
+  
+  /* Desktop styles */
+  @media screen and (min-width: 992px) {
+    #pageName {
+      font-size: 100px;
+    }
+    .text_button {
+      font-size: 15px;
+    }
+    .product-item {
+      padding: 20px;
+    }
+  }
