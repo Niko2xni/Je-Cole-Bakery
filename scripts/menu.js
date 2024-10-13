@@ -5,13 +5,31 @@ let checkOut = document.querySelector('.checkOut');
 var cart = [];
 var totalPrice = 0.00;
 
+document.addEventListener('DOMContentLoaded', loadCart);
+
 function addToCart(name, price) {
-    cart.push({ bread: name, rate: price });
-    totalPrice += price;
+    // Create an item object to send to the server
+    const item = {
+        name: name,
+        price: price
+    };
 
-    display();
-
-    body.classList.add('active');
+    // Send the item to the PHP server using AJAX (fetch)
+    fetch('add-to-cart.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(item) // Convert the item object to JSON
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(data.message); // Show the server response (e.g., "Item added to cart")
+        loadCart(); // Reload the cart to show updated items
+    })
+    .catch(error => {
+        console.error('Error adding item to cart:', error);
+    });
 };
 
 function removeFromCart(index) {
@@ -19,37 +37,48 @@ function removeFromCart(index) {
     cart.splice(index, 1);
 
     display();
-}
+};
 
-function display() {
-    var cartItem = document.getElementById('cartItem');
-    var cartPrice = document.getElementById('cartPrice');
-    var cartTotal = document.getElementById('cartTotal');
+function loadCart() {
+    // Fetch the cart items from the server
+    fetch('get-cart.php')
+        .then(response => response.json())
+        .then(items => {
+            // Now, update the cart display
+            var cartItem = document.getElementById('cartItem');
+            var cartPrice = document.getElementById('cartPrice');
+            var cartTotal = document.getElementById('cartTotal');
 
-    cartItem.innerHTML = '';
-    cartPrice.innerHTML = '';
+            cartItem.innerHTML = '';
+            cartPrice.innerHTML = '';
 
-    cart.forEach(function (pizza, index) {
-        var addedItems = document.createElement('li');
-        var bills = document.createElement('li');
+            let totalPrice = 0;
 
-        addedItems.textContent = pizza.bread;
+            items.forEach((item, index) => {
+                const addedItems = document.createElement('li');
+                const bills = document.createElement('li');
 
-        bills.textContent = '₱' + pizza.rate.toFixed(2);
+                addedItems.textContent = item.name;
+                bills.textContent = '₱' + item.price.toFixed(2);
 
-        var removeButton = document.createElement('button');
-        removeButton.textContent = 'Remove';
-        removeButton.onclick = function() {
-            removeFromCart(index);
-        };
+                totalPrice += item.price;
 
-        addedItems.appendChild(removeButton);
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'Remove';
+                removeButton.onclick = function () {
+                    removeFromCart(index); // You can handle removal logic similarly via AJAX
+                };
 
-        cartItem.appendChild(addedItems);
-        cartPrice.appendChild(bills);
-    });
-    
-    cartTotal.textContent = '₱' + totalPrice.toFixed(2);
+                addedItems.appendChild(removeButton);
+                cartItem.appendChild(addedItems);
+                cartPrice.appendChild(bills);
+            });
+
+            cartTotal.textContent = '₱' + totalPrice.toFixed(2);
+        })
+        .catch(error => {
+            console.error('Error loading cart:', error);
+        });
 };
 
 openCart.addEventListener('click', ()=>{

@@ -237,3 +237,14 @@ pointer-events: none;
 {
 animation: contentOut 1.5s linear 1 forwards!important;
 }
+
+.button {
+    background-color: black;
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px;
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px;
+    margin-top: 10px;
+}
