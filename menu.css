@@ -219,6 +219,9 @@ th{
     .product-item {
       padding: 5px;
     }
+    .pic {
+      width: 60%;
+    }
   }
   
   /* Tablet styles */
@@ -232,6 +235,9 @@ th{
     .product-item {
       padding: 15px;
     }
+    .pic {
+      width: 70%;
+    }
   }
   
   /* Desktop styles */
@@ -244,5 +250,8 @@ th{
     }
     .product-item {
       padding: 20px;
+    }
+    .pic {
+      width: 80%;
     }
   }

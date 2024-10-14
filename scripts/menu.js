@@ -107,6 +107,7 @@ checkOut.addEventListener('click', ()=>{
     if (cart.length === 0) {
         alert('You need to add an item first!');
     } else {
+        localStorage.setItem("cart", JSON.stringify(cart)); //add this for cart
         localStorage.setItem("totalPrice", totalPrice.toFixed(2));
         window.location.href = "delivery.html";
     }
