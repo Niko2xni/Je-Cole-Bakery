@@ -198,7 +198,7 @@ footer {
 /* Desktop styles */
 @media screen and (min-width: 993px) {
   #header {
-    padding: 30px 80px;
+    padding: 30px, 80px;
   }
   #logo {
     height: 70px;
@@ -211,8 +211,10 @@ footer {
     max-width: 30%;
     margin: 5% auto;
   }
+  /*
   .footer-content {
     padding: 30px;
     gap: 30px;
-  }
+  } 
+  */
 }

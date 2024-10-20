@@ -16,6 +16,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const storedCart = JSON.parse(localStorage.getItem("cart"));
     const storedTotalPrice = localStorage.getItem("totalPrice");
 
+    console.log("Cart:", storedCart);
+    console.log("Total Price:", storedTotalPrice);
+
     if (storedFname && storedLname && storedEmail && storedNumber) {
  
         document.querySelector("#customerInfo tr:nth-child(2) td:nth-child(2)").textContent = storedFname;
@@ -35,25 +38,34 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector("#customerInfo tr:nth-child(10) td:nth-child(2)").textContent = storedCity;
     }
 
-    //order details
     const orderTable = document.querySelector("#orderInfo");
-    if (storedCart && storedCart.length > 0 && storedTotalPrice) {
-        // Set total price
-        document.querySelector("#orderInfo tr:nth-child(2) td:nth-child(2)").textContent = '₱' + parseFloat(storedTotalPrice).toFixed(2);
 
+    if (storedCart && storedCart.length > 0 && storedTotalPrice) {
         // Add each item from the cart
         storedCart.forEach(item => {
             const row = document.createElement('tr');
             const itemCell = document.createElement('td');
             const priceCell = document.createElement('td');
             
-            itemCell.textContent = item.bread;
-            priceCell.textContent = '₱' + item.rate.toFixed(2);
+            itemCell.textContent = item.name;
+            priceCell.textContent = '₱' + parseFloat(item.price).toFixed(2);
             
             row.appendChild(itemCell);
             row.appendChild(priceCell);
             orderTable.appendChild(row);
         });
+
+        // Add a row for the total price
+        const totalRow = document.createElement('tr');
+        const totalTextCell = document.createElement('td');
+        const totalPriceCell = document.createElement('td');
+        
+        totalTextCell.innerHTML = '<h3>Total Price: </h3>';
+        totalPriceCell.innerHTML = '₱' + parseFloat(storedTotalPrice).toFixed(2);
+        
+        totalRow.appendChild(totalTextCell);
+        totalRow.appendChild(totalPriceCell);
+        orderTable.appendChild(totalRow);
     } else {
         alert("No order data found!");
     }
