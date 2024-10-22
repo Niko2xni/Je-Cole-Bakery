@@ -9,17 +9,31 @@
     <link rel="icon" href="images/tab.png">
 </head>
 <body>
-    <section id="header">
+    <header id="desktop-navbar">
         <a href="index.html"><img src="images/logoWhite.png" id="logo"></a>
         <nav>
             <ul id="navbar">
-                <li><a href="index.html">Log in</a></li>
-                <li><a class="active" href="menu.html">Menu</a></li>
+                <li><a class="active" href="index.html">Log in</a></li>
+                <li><a href="menu.html">Menu</a></li>
                 <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="#" id="openCart">Cart</a></li>
             </ul>
         </nav>
-    </section>
+    </header>
+    <header id="mobile-navbar">
+        <img src="images/logoWhite.png" id="logo">
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu-links">
+            <li><a href="#Login" onclick="toggleMenu()">Log In</a></li>
+            <li><a href="#Menu" onclick="toggleMenu()">Menu</a></li>
+            <li><a href="#About Us" onclick="toggleMenu()">About Us</a></li>
+          </div>
+        </div>
+    </header>
 
     <section id = "menupage">
         <div id = "title">
@@ -134,5 +148,6 @@
         </div>
     </footer>
     <script src="scripts/menu.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
