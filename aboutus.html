@@ -9,14 +9,34 @@
     <link rel="icon" href="images/logoWhite.png">
 </head>
 <body>
-    <section id="header">
+    <header id="desktop-navbar">
         <a href="index.html"><img src="images/logoWhite.png" id="logo"></a>
+        <nav>
             <ul id="navbar">
                 <li><a href="index.html">Log in</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a class="active" href="aboutus.html">About Us</a></li>
             </ul>
-    </section>
+        </nav>
+    </header>
+    
+    <header id="mobile-navbar">
+        <img src="images/logoWhite.png" id="logo">
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="menu-links">
+            <li><a href="#Login" onclick="toggleMenu()">Log In</a></li>
+            <li><a href="#Menu" onclick="toggleMenu()">Menu</a></li>
+            <li><a href="#About Us" onclick="toggleMenu()">About Us</a></li>
+          </div>
+        </div>
+    </header>
+
     <video autoplay loop muted plays-inline>
         <source src="media/AboutBread.mp4" type="video/mp4">
     </video>
@@ -197,6 +217,7 @@
         </div>
     </footer>
     <script src="scripts/aboutus.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
 

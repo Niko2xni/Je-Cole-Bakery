@@ -16,9 +16,11 @@
                 <li><a class="active" href="index.html">Log in</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="#" id="openCart">Cart</a></li>
             </ul>
         </nav>
     </header>
+    
     <header id="mobile-navbar">
         <img src="images/logoWhite.png" id="logo">
         <div class="hamburger-menu">
@@ -31,20 +33,25 @@
             <li><a href="#Login" onclick="toggleMenu()">Log In</a></li>
             <li><a href="#Menu" onclick="toggleMenu()">Menu</a></li>
             <li><a href="#About Us" onclick="toggleMenu()">About Us</a></li>
+            <li><a href="#" id="openCart" onclick="toggleMenu()">Cart</a></li>
           </div>
         </div>
     </header>
 
-    <section id = "menupage">
-        <div id = "title">
+    <section>
+        <div class="menuTitle">
             <video autoplay loop muted plays-inline>
                 <source src="media/paris.mp4" type="video/mp4">
             </video>
-            <img src="images/logoWhite.png" id="logo1">
-            <p id="subtext"> So fast, so good! The home of freshly baked French pastries. </p>
+
+            <img src="images/logoWhite.png" id="menuLogo">
+
+            <p id="menuText"> So fast, so good! The home of freshly baked French pastries. </p>
             <p id="pageName">Menu</p>
         </div>
-    
+    </section>
+
+    <section>
         <div id = "menuItems">
             <div class ="product-item">
                 <img src="images/croissant.png" class="pic">
@@ -147,6 +154,7 @@
             </div>
         </div>
     </footer>
+
     <script src="scripts/menu.js"></script>
     <script src="scripts/script.js"></script>
 </body>
