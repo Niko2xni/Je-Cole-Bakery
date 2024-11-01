@@ -24,6 +24,7 @@ signupForm.addEventListener('submit', (event) => {
         localStorage.setItem("lname", lNameValue);
         localStorage.setItem("email", emailValue);
         localStorage.setItem("number", phoneValue);
+        localStorage.setItem("password", passValue);
 
         alert("You have successfully registered an account");
 

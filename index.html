@@ -8,7 +8,7 @@
     <link rel="icon" href="images/tab.png">
 </head>
 <body>
-    <section id="header">
+    <header id="desktop-navbar">
         <a href="index.html"><img src="images/logoWhite.png" id="logo"></a>
         <nav>
             <ul id="navbar">
@@ -17,9 +17,25 @@
                 <li><a href="aboutus.html">About Us</a></li>
             </ul>
         </nav>
-    </section>
+    </header>
+    <header id="mobile-navbar">
+        <img src="images/logoWhite.png" id="logo">
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu-links">
+            <li><a href="#Login" onclick="toggleMenu()">Log In</a></li>
+            <li><a href="#Menu" onclick="toggleMenu()">Menu</a></li>
+            <li><a href="#About Us" onclick="toggleMenu()">About Us</a></li>
+          </div>
+        </div>
+    </header>
+
     <section>
-        <div class="container">
+        <div class="form">
             <h1>Log in</h1>
             <p>New user? <a href = "signup.html">Sign up</a> instead</p>
 
@@ -27,11 +43,10 @@
                 <label for="email"><h4>Email:</h4></label>
                 <input type = "email" id = "email" required>
                 <br><br><br>
-               <label for="Password"><h4>Password:</h4></label>
+                <label for="Password"><h4>Password:</h4></label>
                 <input type = "password" id = "password" required>
-            <button type="submit" id="submit"><h3>Log in</h3></button>
+                <button type="submit" id="submit"><h3>Log in</h3></button>
             </form>
-
         </div>
     </section>
     <footer>
@@ -57,5 +72,6 @@
         </div>
     </footer>
     <script src="scripts/login.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
